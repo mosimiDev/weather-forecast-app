@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Search from "@mui/icons-material/Search";
 import Card from "@mui/material/Card";
 import { CardContent } from "@mui/material";
@@ -11,7 +11,7 @@ function Test(props) {
     <div>
       <button
         type="submit"
-        onSubmit={props.fetchWeather}
+        onClick={props.fetchWeather}
         className="relative text-gray-700 pointer top-9 left-28 md:left-80 lg:hidden"
       >
         <Search />

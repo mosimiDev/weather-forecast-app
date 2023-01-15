@@ -1,6 +1,6 @@
 export const WeatherTypes = [
     {
-      type: "Sunny",
+      type: "Clear",
       img: "https://cdn-icons-png.flaticon.com/512/6974/6974833.png",
     },
     {

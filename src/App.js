@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import Test from "./Test";
 import { WeatherTypes } from "./WeatherTypes";
@@ -39,6 +39,19 @@ function App() {
         setLoading(false);
       });
   };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      fetchWeather();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
   return (
     <div className="bg-slate-900 h-screen">
       <h4 className="text-3xl text-gray-200 font-bold pt-3 mb-3 text-center">
